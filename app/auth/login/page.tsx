@@ -2,7 +2,7 @@
 
 import type React from "react";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { motion } from "framer-motion";
 import { Leaf, Eye, EyeOff, Mail, Lock } from "lucide-react";
 import Link from "next/link";
@@ -13,7 +13,23 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/components/ui/use-toast";
 
-export default function LoginPage() {
+function SearchParamsHandler() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const { data: session, status } = useSession();
+  const { toast } = useToast();
+
+  const callbackUrl = searchParams.get("callbackUrl") || "/";
+
+  // Redirect if already authenticated
+  useEffect(() => {
+    if (status === "authenticated" && session) {
+      router.push(callbackUrl);
+    }
+  }, [session, status, router, callbackUrl]);
+}
+
+function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -254,18 +270,45 @@ export default function LoginPage() {
                   </div>
                   <div className="text-emerald-600">
                     <div>Email: business@test.com</div>
-                    <div>Password: business123</div>
-                  </div>
-                </div>
-              </div>
 
-              <div className="mt-3 text-xs text-emerald-600 text-center">
-                Click "Use" to auto-fill credentials for testing
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </motion.div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}  );    </div>      <LoginForm />      </Suspense>        <SearchParamsHandler />      <Suspense fallback={null}>    <div>  return (export default function LoginPage() {}  );    </div>      </motion.div>        </Card>          </CardContent>            </div>              </div>                Click "Use" to auto-fill credentials for testing              <div className="mt-3 text-xs text-emerald-600 text-center">              </div>                </div>                  </div>                    <div>Password: business123</div>function LoginFormSkeleton() {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-pulse">Loading...</div>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<LoginFormSkeleton />}>
+      <LoginForm />
+    </Suspense>
   );
 }

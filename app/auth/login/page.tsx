@@ -216,7 +216,9 @@ export default function LoginPage() {
       <Suspense fallback={<LoginFormSkeleton />}>
         <LoginForm />
       </Suspense>
-      <SearchParamsHandler />
+      <Suspense fallback={null}>
+        <SearchParamsHandler />
+      </Suspense>
     </>
   );
 }

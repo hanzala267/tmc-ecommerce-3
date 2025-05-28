@@ -1,7 +1,5 @@
 "use client";
 
-import type React from "react";
-
 import { useState, useEffect, Suspense } from "react";
 import { motion } from "framer-motion";
 import { Leaf, Eye, EyeOff, Mail, Lock } from "lucide-react";
@@ -17,16 +15,16 @@ function SearchParamsHandler() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { data: session, status } = useSession();
-  const { toast } = useToast();
 
   const callbackUrl = searchParams.get("callbackUrl") || "/";
 
-  // Redirect if already authenticated
   useEffect(() => {
     if (status === "authenticated" && session) {
       router.push(callbackUrl);
     }
   }, [session, status, router, callbackUrl]);
+
+  return null;
 }
 
 function LoginForm() {
@@ -41,7 +39,6 @@ function LoginForm() {
 
   const callbackUrl = searchParams.get("callbackUrl") || "/";
 
-  // Redirect if already authenticated
   useEffect(() => {
     if (status === "authenticated" && session) {
       router.push(callbackUrl);
@@ -71,7 +68,6 @@ function LoginForm() {
           description: "Welcome back!",
         });
 
-        // Small delay to ensure session is updated
         setTimeout(() => {
           router.push(callbackUrl);
           router.refresh();
@@ -88,7 +84,6 @@ function LoginForm() {
     }
   };
 
-  // Show loading while checking session
   if (status === "loading") {
     return (
       <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white flex items-center justify-center">
@@ -97,7 +92,6 @@ function LoginForm() {
     );
   }
 
-  // Don't render login form if already authenticated
   if (session) {
     return null;
   }
@@ -201,103 +195,14 @@ function LoginForm() {
                 </Link>
               </p>
             </div>
+          </CardContent>
+        </Card>
+      </motion.div>
+    </div>
+  );
+}
 
-            {/* Demo Credentials Section */}
-            <div className="mt-6 bg-emerald-50 border border-emerald-200 rounded-lg p-4">
-              <h4 className="font-semibold text-emerald-900 mb-3 text-center">
-                Demo Accounts
-              </h4>
-              <div className="space-y-3 text-sm">
-                <div className="bg-white rounded-md p-3 border border-emerald-100">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="font-medium text-emerald-800">
-                      👑 Admin Account
-                    </span>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setEmail("admin@tmc.com");
-                        setPassword("admin123");
-                      }}
-                      className="text-xs bg-emerald-600 text-white px-2 py-1 rounded hover:bg-emerald-700"
-                    >
-                      Use
-                    </button>
-                  </div>
-                  <div className="text-emerald-600">
-                    <div>Email: admin@tmc.com</div>
-                    <div>Password: admin123</div>
-                  </div>
-                </div>
-
-                <div className="bg-white rounded-md p-3 border border-emerald-100">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="font-medium text-emerald-800">
-                      👤 Consumer Account
-                    </span>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setEmail("consumer@test.com");
-                        setPassword("consumer123");
-                      }}
-                      className="text-xs bg-emerald-600 text-white px-2 py-1 rounded hover:bg-emerald-700"
-                    >
-                      Use
-                    </button>
-                  </div>
-                  <div className="text-emerald-600">
-                    <div>Email: consumer@test.com</div>
-                    <div>Password: consumer123</div>
-                  </div>
-                </div>
-
-                <div className="bg-white rounded-md p-3 border border-emerald-100">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="font-medium text-emerald-800">
-                      🏢 Business Account
-                    </span>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setEmail("business@test.com");
-                        setPassword("business123");
-                      }}
-                      className="text-xs bg-emerald-600 text-white px-2 py-1 rounded hover:bg-emerald-700"
-                    >
-                      Use
-                    </button>
-                  </div>
-                  <div className="text-emerald-600">
-                    <div>Email: business@test.com</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}  );    </div>      <LoginForm />      </Suspense>        <SearchParamsHandler />      <Suspense fallback={null}>    <div>  return (export default function LoginPage() {}  );    </div>      </motion.div>        </Card>          </CardContent>            </div>              </div>                Click "Use" to auto-fill credentials for testing              <div className="mt-3 text-xs text-emerald-600 text-center">              </div>                </div>                  </div>                    <div>Password: business123</div>function LoginFormSkeleton() {
+function LoginFormSkeleton() {
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="animate-pulse">Loading...</div>
@@ -307,8 +212,11 @@ function LoginForm() {
 
 export default function LoginPage() {
   return (
-    <Suspense fallback={<LoginFormSkeleton />}>
-      <LoginForm />
-    </Suspense>
+    <>
+      <Suspense fallback={<LoginFormSkeleton />}>
+        <LoginForm />
+      </Suspense>
+      <SearchParamsHandler />
+    </>
   );
 }

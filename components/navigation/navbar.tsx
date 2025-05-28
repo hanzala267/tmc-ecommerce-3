@@ -88,7 +88,9 @@ export function Navbar() {
           >
             <Link href="/" className="flex items-center space-x-2">
               <Leaf className="h-8 w-8 text-emerald-600" />
-              <span className="text-2xl font-bold text-emerald-800">TMC</span>
+              <span className="text-2xl font-bold text-emerald-800">
+                Marinzo
+              </span>
             </Link>
           </motion.div>
 

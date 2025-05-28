@@ -410,7 +410,7 @@ export default function AdminDashboard() {
           >
             <h1 className="text-3xl font-bold mb-2">Admin Dashboard</h1>
             <p className="text-emerald-100">
-              Manage your TMC business operations
+              Manage your Marinzo business operations
             </p>
           </motion.div>
         </div>

@@ -171,7 +171,7 @@ export default function RegisterPage() {
             </motion.div>
             <div>
               <CardTitle className="text-2xl font-bold text-emerald-900">
-                Join TMC
+                Join Marinzo
               </CardTitle>
               <p className="text-emerald-600 mt-2">
                 Create your account to start ordering

@@ -132,7 +132,7 @@ export default function ContactPage() {
               {
                 icon: Mail,
                 title: "Email",
-                info: "info@tmc-chicken.com",
+                info: "info@Marinzo-chicken.com",
                 description: "Send us your questions anytime",
                 color: "blue",
               },
@@ -327,7 +327,7 @@ export default function ContactPage() {
                       <MapPin className="h-5 w-5 text-emerald-600 mt-1" />
                       <div>
                         <p className="font-medium text-emerald-900">
-                          TMC - The Marinated Chicken
+                          Marinzo - Premium Marinated Chicken
                         </p>
                         <p className="text-emerald-700">
                           Faisalabad, Punjab, Pakistan
@@ -411,7 +411,7 @@ export default function ContactPage() {
                     <div className="flex items-center space-x-3">
                       <Mail className="h-4 w-4 text-emerald-600" />
                       <span className="text-emerald-700">
-                        Support: support@tmc-chicken.com
+                        Support: support@Marinzo-chicken.com
                       </span>
                     </div>
                   </div>
@@ -505,7 +505,7 @@ export default function ContactPage() {
             <h2 className="text-4xl font-bold mb-6">Ready to Order?</h2>
             <p className="text-xl mb-8 text-emerald-100">
               Don't wait! Experience the premium quality and authentic flavors
-              of TMC marinated chicken today.
+              of Marinzo marinated chicken today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

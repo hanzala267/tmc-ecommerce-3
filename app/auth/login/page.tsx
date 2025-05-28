@@ -111,7 +111,7 @@ function LoginForm() {
             <CardTitle className="text-2xl font-bold text-emerald-900">
               Welcome Back
             </CardTitle>
-            <p className="text-emerald-600">Sign in to your TMC account</p>
+            <p className="text-emerald-600">Sign in to your Marinzo account</p>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">

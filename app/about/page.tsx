@@ -32,13 +32,13 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-6xl font-bold bg-gradient-to-r from-emerald-900 to-emerald-700 bg-clip-text text-transparent mb-6">
-              About TMC
+              About Marinzo
             </h1>
             <p className="text-xl text-emerald-700 leading-relaxed">
-              Since 2020, TMC has been dedicated to bringing premium marinated
-              chicken to families and businesses across Faisalabad. Our
-              commitment to quality, freshness, and authentic flavors has made
-              us the trusted choice for thousands of customers.
+              Since 2020, Marinzo has been dedicated to bringing premium
+              marinated chicken to families and businesses across Faisalabad.
+              Our commitment to quality, freshness, and authentic flavors has
+              made us the trusted choice for thousands of customers.
             </p>
           </motion.div>
         </div>
@@ -60,15 +60,15 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-emerald-700">
                 <p>
-                  TMC was born from a simple idea: to provide busy families and
-                  businesses with premium quality marinated chicken that saves
-                  time without compromising on taste or nutrition.
+                  Marinzo was born from a simple idea: to provide busy families
+                  and businesses with premium quality marinated chicken that
+                  saves time without compromising on taste or nutrition.
                 </p>
                 <p>
                   Our founder, a passionate chef with over 15 years of
                   experience, noticed that people were struggling to find
                   high-quality, ready-to-cook marinated chicken in Faisalabad.
-                  This gap in the market inspired the creation of TMC.
+                  This gap in the market inspired the creation of Marinzo.
                 </p>
                 <p>
                   Today, we're proud to serve over 1,000 satisfied customers and
@@ -111,7 +111,7 @@ export default function AboutPage() {
               Our Foundation
             </h2>
             <p className="text-xl text-emerald-700 max-w-2xl mx-auto">
-              The principles that guide everything we do at TMC
+              The principles that guide everything we do at Marinzo
             </p>
           </motion.div>
 
@@ -173,7 +173,7 @@ export default function AboutPage() {
               Meet Our Team
             </h2>
             <p className="text-xl text-emerald-700 max-w-2xl mx-auto">
-              The passionate people behind TMC's success
+              The passionate people behind Marinzo's success
             </p>
           </motion.div>
 
@@ -381,7 +381,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl font-bold mb-6">Join the TMC Family</h2>
+            <h2 className="text-4xl font-bold mb-6">Join the Marinzo Family</h2>
             <p className="text-xl mb-8 text-emerald-100">
               Experience the difference that quality, passion, and dedication
               make. Become part of our growing community of satisfied customers.

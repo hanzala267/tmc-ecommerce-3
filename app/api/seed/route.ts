@@ -43,7 +43,7 @@ export async function POST() {
       data: {
         firstName: "Admin",
         lastName: "User",
-        email: "admin@tmc.com",
+        email: "admin@marinzo.com",
         password: hashedAdminPassword,
         phone: "+923001234567",
         role: "ADMIN",
@@ -218,7 +218,7 @@ export async function POST() {
     return NextResponse.json({
       message: "Database seeded successfully",
       data: {
-        adminEmail: "admin@tmc.com",
+        adminEmail: "admin@marinzo.com",
         adminPassword: "admin123",
         consumerEmail: "consumer@test.com",
         consumerPassword: "consumer123",

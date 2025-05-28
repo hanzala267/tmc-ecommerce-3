@@ -475,8 +475,8 @@ export default function HomePage() {
             <motion.div variants={fadeInUp} className="relative">
               <div className="relative z-10">
                 <Image
-                  src="/placeholder.svg?height=600&width=500&query=premium marinated chicken platter with herbs"
-                  alt="Premium Marinated Chicken"
+                  src="/hero-marinated-chicken.jpg" // Updated to a stock image
+                  alt="Premium Marinated Chicken Platter"
                   width={500}
                   height={600}
                   className="rounded-3xl shadow-2xl"
@@ -562,7 +562,7 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-5xl font-bold bg-gradient-to-r from-emerald-900 to-emerald-700 bg-clip-text text-transparent mb-4">
-              Why Choose TMC?
+              Why Choose Marinzo?
             </h2>
             <p className="text-xl text-emerald-700 max-w-2xl mx-auto">
               We're committed to delivering the highest quality marinated
@@ -760,7 +760,7 @@ export default function HomePage() {
             <div>
               <div className="flex items-center space-x-2 mb-6">
                 <Leaf className="h-10 w-10 text-emerald-400" />
-                <span className="text-3xl font-bold">TMC</span>
+                <span className="text-3xl font-bold">Marinzo</span>
               </div>
               <p className="text-emerald-200 mb-4">
                 Premium marinated chicken delivered fresh to your doorstep in
@@ -842,7 +842,7 @@ export default function HomePage() {
                 </p>
                 <p className="flex items-center space-x-2">
                   <span>📧</span>
-                  <span>info@tmc-chicken.com</span>
+                  <span>info@marinzo-chicken.com</span>
                 </p>
                 <p className="flex items-center space-x-2">
                   <span>📍</span>
@@ -857,7 +857,9 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-emerald-700 mt-12 pt-8 text-center text-emerald-200">
-            <p>&copy; 2024 TMC - The Marinated Chicken. All rights reserved.</p>
+            <p>
+              &copy; 2024 Marinzo - The Marinated Chicken. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>

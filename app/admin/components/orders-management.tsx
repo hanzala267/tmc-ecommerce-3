@@ -416,7 +416,7 @@ export default function OrdersManagement() {
         </head>
         <body>
           <div class="header">
-            <div class="logo">TMC - Premium Marinated Chicken</div>
+            <div class="logo">Marinzo - Premium Marinated Chicken</div>
             <div class="tagline">Fresh, Natural, and Bursting with Flavor</div>
             <div class="receipt-title">ORDER RECEIPT</div>
           </div>
@@ -562,10 +562,10 @@ export default function OrdersManagement() {
           }
 
           <div class="footer">
-            <h4>Thank you for choosing TMC!</h4>
+            <h4>Thank you for choosing Marinzo!</h4>
             <p>🌟 We appreciate your business and hope you enjoy our premium marinated chicken.</p>
-            <p>📧 Contact: info@tmc-chicken.com | 📞 +92 (300) 123-4567</p>
-            <p>🌐 Visit us: www.tmc-chicken.com</p>
+            <p>📧 Contact: info@marinzo-chicken.com | 📞 +92 (300) 123-4567</p>
+            <p>🌐 Visit us: www.marinzo-chicken.com</p>
             <p style="margin-top: 20px; font-size: 12px;">
               This receipt was generated on ${new Date().toLocaleString()}
             </p>
@@ -1256,27 +1256,27 @@ function OrderDetails({
                 </div>
               </div>
             ))}
-          </div>
 
-          <Separator className="my-4" />
+            <Separator className="my-4" />
 
-          <div className="space-y-2">
-            <div className="flex justify-between text-gray-600">
-              <span>Subtotal:</span>
-              <span>
-                PKR{" "}
-                {order.orderItems
-                  .reduce((sum, item) => sum + item.price * item.quantity, 0)
-                  .toLocaleString()}
-              </span>
-            </div>
-            <div className="flex justify-between text-gray-600">
-              <span>Shipping:</span>
-              <span className="text-green-600">FREE</span>
-            </div>
-            <div className="flex justify-between text-xl font-bold text-emerald-900 pt-2 border-t">
-              <span>Total:</span>
-              <span>PKR {order.totalAmount.toLocaleString()}</span>
+            <div className="space-y-2">
+              <div className="flex justify-between text-gray-600">
+                <span>Subtotal:</span>
+                <span>
+                  PKR{" "}
+                  {order.orderItems
+                    .reduce((sum, item) => sum + item.price * item.quantity, 0)
+                    .toLocaleString()}
+                </span>
+              </div>
+              <div className="flex justify-between text-gray-600">
+                <span>Shipping:</span>
+                <span className="text-green-600">FREE</span>
+              </div>
+              <div className="flex justify-between text-xl font-bold text-emerald-900 pt-2 border-t">
+                <span>Total:</span>
+                <span>PKR {order.totalAmount.toLocaleString()}</span>
+              </div>
             </div>
           </div>
         </CardContent>

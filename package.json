@@ -52,6 +52,7 @@
     "embla-carousel-react": "8.5.1",
     "emblor": "^1.4.8",
     "framer-motion": "latest",
+    "gsap": "^3.13.0",
     "immer": "latest",
     "input-otp": "1.4.1",
     "lucide-react": "^0.454.0",

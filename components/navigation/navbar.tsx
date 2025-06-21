@@ -15,6 +15,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Image from "next/image";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,9 +88,8 @@ export function Navbar() {
             className="flex items-center space-x-2"
           >
             <Link href="/" className="flex items-center space-x-2">
-              <Leaf className="h-8 w-8 text-emerald-600" />
-              <span className="text-2xl font-bold text-emerald-800">
-                Marinzo
+              <span>
+                <Image src="/logo.png" height={150} width={100} alt="marinzo" />
               </span>
             </Link>
           </motion.div>

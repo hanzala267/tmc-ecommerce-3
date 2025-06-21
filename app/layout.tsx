@@ -5,7 +5,7 @@ import "./globals.css";
 import { Navbar } from "@/components/navigation/navbar";
 import { AuthSessionProvider } from "@/components/providers/session-provider";
 import { Toaster } from "@/components/ui/toaster";
-
+import { Analytics } from "@vercel/analytics/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -86,6 +86,7 @@ export default function RootLayout({
           <main className="pt-20">{children}</main>
           <Toaster />
         </AuthSessionProvider>
+        <Analytics />
       </body>
     </html>
   );
